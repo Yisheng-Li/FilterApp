@@ -26,12 +26,14 @@ class GalleryViewController: UIViewController,UICollectionViewDelegate, UICollec
         do{
             let gallery = try  DataController.context.fetch(fetchRequest)
             self.gallery = gallery
-        } catch { }
+        } catch {
+            fatalError("Photos fetch failed")
+        }
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 180, height: 200)
         collectionView.collectionViewLayout = layout
-    
+        
         collectionView.register(GalleryCollectionViewCell.nib(), forCellWithReuseIdentifier: GalleryCollectionViewCell.indentifier)
         
     }
@@ -53,9 +55,14 @@ class GalleryViewController: UIViewController,UICollectionViewDelegate, UICollec
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("You tapped me")
+        
+        performSegue(withIdentifier: "PresentPhotoDetails", sender: self)
+        
     }
     
     
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        self.performSegue(withIdentifier: "PresentPhotoDetails", sender: self)
+    //    }
     
 }

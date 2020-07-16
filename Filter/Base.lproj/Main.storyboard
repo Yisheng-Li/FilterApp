@@ -340,6 +340,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <segue destination="vlq-Ez-f1f" kind="show" identifier="PresentPhotoDetails" id="egm-Tv-bNf"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -365,6 +368,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPT-yx-jGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1515.9420289855075" y="64.955357142857139"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="HDI-lc-KOQ">
+            <objects>
+                <viewController id="vlq-Ez-f1f" customClass="PhotoViewController" customModule="Filter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RHS-20-Z6N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="BCg-Yd-M2g"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yd1-Or-gw9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="paC-HI-tdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2501" y="65"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Tm-8w-ULI">

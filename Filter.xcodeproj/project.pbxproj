@@ -25,6 +25,7 @@
 		59A133BC24BE8BDD00FEA972 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A133BA24BE8BDD00FEA972 /* MyCollectionViewCell.swift */; };
 		59A7F7882492B26A00BAE131 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A7F7872492B26A00BAE131 /* TableViewController.swift */; };
 		59BDC44824B7EF430034F804 /* Filter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59BDC44624B7EF430034F804 /* Filter.xcdatamodeld */; };
+		59D8444F24C0F9B10042D58F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D8444E24C0F9B10042D58F /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		59A133BA24BE8BDD00FEA972 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		59A7F7872492B26A00BAE131 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		59BDC44724B7EF430034F804 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		59D8444E24C0F9B10042D58F /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				592364E324BFAF2E00B1871F /* Gallery Collection Cell */,
 				59BDC44524B7EF110034F804 /* CoreData */,
 				593D5EE72486F82000D563B1 /* AppDelegate.swift */,
+				59D8444E24C0F9B10042D58F /* PhotoViewController.swift */,
 				5956100D24BB922D00822729 /* GalleryViewController.swift */,
 				593D5EE92486F82000D563B1 /* SceneDelegate.swift */,
 				593D5EEB2486F82000D563B1 /* ViewController.swift */,
@@ -219,6 +222,7 @@
 				59831D4024980AD6002CBD0D /* ImageProcessor.swift in Sources */,
 				5979CB0524BAF52700FF4852 /* Photo+CoreDataProperties.swift in Sources */,
 				59A7F7882492B26A00BAE131 /* TableViewController.swift in Sources */,
+				59D8444F24C0F9B10042D58F /* PhotoViewController.swift in Sources */,
 				592364E624BFAF6C00B1871F /* GalleryCollectionViewCell.swift in Sources */,
 				593D5EEA2486F82000D563B1 /* SceneDelegate.swift in Sources */,
 			);
