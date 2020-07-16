@@ -19,7 +19,6 @@ struct Filter {
 }
 
 
-
 class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     let dispatchGroup = DispatchGroup()
