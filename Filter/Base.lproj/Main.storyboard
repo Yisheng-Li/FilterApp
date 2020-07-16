@@ -358,6 +358,9 @@
                         <viewLayoutGuide key="safeArea" id="Q8L-Jm-ysS"/>
                     </view>
                     <navigationItem key="navigationItem" title="Gallery" id="vwP-B9-IQu"/>
+                    <connections>
+                        <outlet property="collectionView" destination="CSJ-zR-BtI" id="s0I-tF-Ahl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPT-yx-jGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

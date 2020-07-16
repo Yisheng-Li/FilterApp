@@ -19,6 +19,7 @@ struct Filter {
 }
 
 
+
 class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     let dispatchGroup = DispatchGroup()
@@ -183,8 +184,8 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         photo.date = currentDate
         photo.filter = selectedFilter
         photo.volume = filterVolume
-        photo.currentImage = currentImage.pngData()
-        photo.originalImage = originalImage.pngData()
+        photo.currentImage = currentImage.pngData()!
+        photo.originalImage = originalImage.pngData()!
         
         DataController.saveContext()
         

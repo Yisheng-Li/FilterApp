@@ -17,10 +17,10 @@ extension Photo {
         return NSFetchRequest<Photo>(entityName: "Photo")
     }
 
-    @NSManaged public var filter: String?
-    @NSManaged public var currentImage: Data?
-    @NSManaged public var originalImage: Data?
-    @NSManaged public var date: Date?
+    @NSManaged public var filter: String
+    @NSManaged public var currentImage: Data
+    @NSManaged public var originalImage: Data
+    @NSManaged public var date: Date
     @NSManaged public var volume: Double
 
 }
