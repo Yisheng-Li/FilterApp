@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		592364E624BFAF6C00B1871F /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592364E424BFAF6C00B1871F /* GalleryCollectionViewCell.swift */; };
+		592364E724BFAF6C00B1871F /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592364E524BFAF6C00B1871F /* GalleryCollectionViewCell.xib */; };
 		593D5EE82486F82000D563B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593D5EE72486F82000D563B1 /* AppDelegate.swift */; };
 		593D5EEA2486F82000D563B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593D5EE92486F82000D563B1 /* SceneDelegate.swift */; };
 		593D5EEC2486F82000D563B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593D5EEB2486F82000D563B1 /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		592364E424BFAF6C00B1871F /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		592364E524BFAF6C00B1871F /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		593D5EE42486F82000D563B1 /* Filter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		593D5EE72486F82000D563B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		593D5EE92486F82000D563B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		592364E324BFAF2E00B1871F /* Gallery Collection Cell */ = {
+			isa = PBXGroup;
+			children = (
+				592364E424BFAF6C00B1871F /* GalleryCollectionViewCell.swift */,
+				592364E524BFAF6C00B1871F /* GalleryCollectionViewCell.xib */,
+			);
+			path = "Gallery Collection Cell";
+			sourceTree = "<group>";
+		};
 		593D5EDB2486F82000D563B1 = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +89,8 @@
 		593D5EE62486F82000D563B1 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
-				59A133B824BE8BDD00FEA972 /* Collection Cell */,
-				59831D3A2496C0D8002CBD0D /* not used */,
+				59A133B824BE8BDD00FEA972 /* Filter Menu Collection Cell */,
+				592364E324BFAF2E00B1871F /* Gallery Collection Cell */,
 				59BDC44524B7EF110034F804 /* CoreData */,
 				593D5EE72486F82000D563B1 /* AppDelegate.swift */,
 				5956100D24BB922D00822729 /* GalleryViewController.swift */,
@@ -89,6 +102,7 @@
 				593D5EF02486F82400D563B1 /* Assets.xcassets */,
 				593D5EF22486F82400D563B1 /* LaunchScreen.storyboard */,
 				593D5EF52486F82400D563B1 /* Info.plist */,
+				59831D3A2496C0D8002CBD0D /* not used */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -101,13 +115,13 @@
 			path = "not used";
 			sourceTree = "<group>";
 		};
-		59A133B824BE8BDD00FEA972 /* Collection Cell */ = {
+		59A133B824BE8BDD00FEA972 /* Filter Menu Collection Cell */ = {
 			isa = PBXGroup;
 			children = (
 				59A133BA24BE8BDD00FEA972 /* MyCollectionViewCell.swift */,
 				59A133B924BE8BDD00FEA972 /* MyCollectionViewCell.xib */,
 			);
-			path = "Collection Cell";
+			path = "Filter Menu Collection Cell";
 			sourceTree = "<group>";
 		};
 		59BDC44524B7EF110034F804 /* CoreData */ = {
@@ -182,6 +196,7 @@
 				593D5EF42486F82400D563B1 /* LaunchScreen.storyboard in Resources */,
 				593D5EF12486F82400D563B1 /* Assets.xcassets in Resources */,
 				59A133BB24BE8BDD00FEA972 /* MyCollectionViewCell.xib in Resources */,
+				592364E724BFAF6C00B1871F /* GalleryCollectionViewCell.xib in Resources */,
 				593D5EEF2486F82000D563B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +219,7 @@
 				59831D4024980AD6002CBD0D /* ImageProcessor.swift in Sources */,
 				5979CB0524BAF52700FF4852 /* Photo+CoreDataProperties.swift in Sources */,
 				59A7F7882492B26A00BAE131 /* TableViewController.swift in Sources */,
+				592364E624BFAF6C00B1871F /* GalleryCollectionViewCell.swift in Sources */,
 				593D5EEA2486F82000D563B1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
