@@ -28,6 +28,10 @@ class GalleryViewController: UIViewController,UICollectionViewDelegate, UICollec
             self.gallery = gallery
         } catch { }
         
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 180, height: 200)
+        collectionView.collectionViewLayout = layout
+    
         collectionView.register(GalleryCollectionViewCell.nib(), forCellWithReuseIdentifier: GalleryCollectionViewCell.indentifier)
         
     }
@@ -53,21 +57,5 @@ class GalleryViewController: UIViewController,UICollectionViewDelegate, UICollec
     }
     
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-//
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return gallery.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let calendar = Calendar.current
-//        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-//        cell.textLabel?.text = "\(String(describing: gallery[indexPath.row].filter)) + \(gallery[indexPath.row].volume)"
-//        cell.detailTextLabel?.text = String(calendar.component(.minute, from: gallery[indexPath.row].date!))
-//        return cell
-//    }
     
 }
