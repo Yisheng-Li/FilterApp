@@ -9,9 +9,25 @@
 import UIKit
 
 class PhotoViewController: UIViewController {
-
+    
+    var photo: Photo! = nil
+   // var label: String = ""
+    
+    
+  //  @IBOutlet var label: UILabel!
+    
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var filterLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        imageView.image =  UIImage(data: photo.currentImage)
+        dateLabel.text = String(photo.date.description.split(separator: " ")[0])
+        filterLabel.text = photo.filter
+        
+        
 
         // Do any additional setup after loading the view.
     }

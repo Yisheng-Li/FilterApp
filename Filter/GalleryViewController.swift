@@ -61,8 +61,12 @@ class GalleryViewController: UIViewController,UICollectionViewDelegate, UICollec
     }
     
     
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        self.performSegue(withIdentifier: "PresentPhotoDetails", sender: self)
-    //    }
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            
+            let destination = segue.destination as! PhotoViewController
+            let indexPath = self.collectionView.indexPathsForSelectedItems![0]
+            destination.photo = gallery[indexPath.row]
+            
+        }
     
 }
