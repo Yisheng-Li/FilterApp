@@ -11,10 +11,6 @@ import UIKit
 class PhotoViewController: UIViewController {
     
     var photo: Photo! = nil
-   // var label: String = ""
-    
-    
-  //  @IBOutlet var label: UILabel!
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var dateLabel: UILabel!
@@ -28,11 +24,23 @@ class PhotoViewController: UIViewController {
         filterLabel.text = photo.filter
         
         
-
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onShare(_ sender: Any) {
+        let activityController = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
+            self.present(activityController, animated: true, completion: nil)
+        
+    }
+    
+    
+    @IBAction func onContiuneEditing(_ sender: Any) {
+      
+        
+        navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

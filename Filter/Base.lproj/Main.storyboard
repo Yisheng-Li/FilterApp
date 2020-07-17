@@ -423,17 +423,37 @@
                                     <constraint firstItem="flV-Lh-VEK" firstAttribute="baseline" secondItem="Nh2-JK-6iB" secondAttribute="baseline" id="rkI-Dr-gdU"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P14-Mm-McI" userLabel="share">
+                                <rect key="frame" x="293" y="96" width="21" height="18"/>
+                                <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="onShare:" destination="vlq-Ez-f1f" eventType="touchUpInside" id="CDP-2W-wK8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXR-7N-0Zl" userLabel="continueEditing">
+                                <rect key="frame" x="100" y="96" width="21" height="18"/>
+                                <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="onContiuneEditing:" destination="vlq-Ez-f1f" eventType="touchUpInside" id="vZA-IX-cO1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="nXR-7N-0Zl" firstAttribute="top" secondItem="BCg-Yd-M2g" secondAttribute="top" constant="40" id="3am-Up-8UE"/>
                             <constraint firstItem="BCg-Yd-M2g" firstAttribute="bottom" secondItem="8r1-dd-7Sh" secondAttribute="bottom" constant="220" id="7np-PV-4kF"/>
                             <constraint firstItem="20o-I6-n02" firstAttribute="leading" secondItem="BCg-Yd-M2g" secondAttribute="leading" constant="45" id="EWh-S8-fXV"/>
                             <constraint firstItem="8r1-dd-7Sh" firstAttribute="top" secondItem="BCg-Yd-M2g" secondAttribute="top" constant="88" id="FF3-hG-fW4"/>
                             <constraint firstItem="8r1-dd-7Sh" firstAttribute="leading" secondItem="BCg-Yd-M2g" secondAttribute="leading" constant="45" id="Fij-Nc-Xe0"/>
                             <constraint firstItem="20o-I6-n02" firstAttribute="top" secondItem="8r1-dd-7Sh" secondAttribute="bottom" id="NGg-13-Axu"/>
                             <constraint firstItem="BCg-Yd-M2g" firstAttribute="bottom" secondItem="20o-I6-n02" secondAttribute="bottom" id="OeN-7J-WIN"/>
+                            <constraint firstItem="P14-Mm-McI" firstAttribute="top" secondItem="BCg-Yd-M2g" secondAttribute="top" constant="40" id="RxN-Bv-iEJ"/>
                             <constraint firstItem="BCg-Yd-M2g" firstAttribute="trailing" secondItem="20o-I6-n02" secondAttribute="trailing" constant="45" id="T3m-6U-mjF"/>
                             <constraint firstItem="BCg-Yd-M2g" firstAttribute="trailing" secondItem="8r1-dd-7Sh" secondAttribute="trailing" constant="45" id="UAA-VB-Eh9"/>
+                            <constraint firstItem="nXR-7N-0Zl" firstAttribute="leading" secondItem="BCg-Yd-M2g" secondAttribute="leading" constant="100" id="Yno-kk-mjd"/>
+                            <constraint firstItem="BCg-Yd-M2g" firstAttribute="trailing" secondItem="P14-Mm-McI" secondAttribute="trailing" constant="100" id="bmX-HI-qTV"/>
+                            <constraint firstItem="8r1-dd-7Sh" firstAttribute="top" secondItem="nXR-7N-0Zl" secondAttribute="bottom" constant="30" id="d7V-BL-ffQ"/>
+                            <constraint firstItem="8r1-dd-7Sh" firstAttribute="top" secondItem="P14-Mm-McI" secondAttribute="bottom" constant="30" id="lE3-94-p8T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BCg-Yd-M2g"/>
                     </view>
@@ -472,6 +492,8 @@
         <image name="Filter" width="44" height="44"/>
         <image name="NewPhoto" width="44" height="44"/>
         <image name="Share" width="44" height="44"/>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="doc.richtext" catalog="system" width="115" height="128"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="scenery" width="100" height="134"/>

@@ -64,7 +64,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         
     }
     
-    static var gallery = [Photo]()
+    var gallery = [Photo]()
     
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var pastImageView: UIImageView!
@@ -188,11 +188,8 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         
         DataController.saveContext()
         
-        ViewController.gallery.append(photo)
+        gallery.append(photo)
         
-        print(filterVolume)
-        print(currentDate)
-        print(selectedFilter)
         
     }
     
