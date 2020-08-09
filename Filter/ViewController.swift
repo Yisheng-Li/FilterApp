@@ -21,6 +21,8 @@ struct Filter {
 
 class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
+    static let apiKey = "xxxxxxxxxxxxxxxxxxxxxxxxx"
+    
     let dispatchGroup = DispatchGroup()
     let filtersUpdateQueue = DispatchQueue.global(qos: .utility)
     
@@ -64,7 +66,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         
     }
     
-    var gallery = [Photo]()
+    var category = "Others"
     
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var pastImageView: UIImageView!
@@ -185,12 +187,9 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         photo.volume = filterVolume
         photo.currentImage = currentImage.pngData()!
         photo.originalImage = originalImage.pngData()!
+        photo.category = category
         
         DataController.saveContext()
-        
-        gallery.append(photo)
-        
-        
     }
     
     
@@ -296,6 +295,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         dismiss(animated: true, completion: nil)
+        let client = MSCSAPIClient(subscriptionKey: ViewController.apiKey)
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             originalImage = image
             currentImage = image
@@ -303,6 +303,36 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
             selectedFilter = ""
             filterButton.isEnabled = false
             slider.setValue(2, animated: false)
+            
+            client.analyzeImage(image, detectFeatures: [.Adult, .Categories, .Color, .Description, .Faces, .ImageType, .Tags]) { (json, error) in
+                guard error == nil else {
+                    print (error!.localizedDescription)
+                    return
+                }
+                
+                guard let data = json else {
+                    print ("no json data")
+                    return
+                }
+                self.category = getCategory(data:data)
+           }
+        }
+        
+        func getCategory(data: AnyObject) -> String {
+            if let categories = data["categories"] as? [Dictionary<String, AnyObject>] {
+                var score = categories[0]["score"] as! Double
+                var category = categories[0]["name"] as! String
+                for cate in categories {
+                    let currentScore = cate["score"] as! Double
+                    if  currentScore > score {
+                        score = currentScore
+                        category = cate["name"] as! String
+                    }
+                }
+                return String(category.split(separator: "_")[0])
+            } else {
+                return "others"
+            }
         }
     }
     

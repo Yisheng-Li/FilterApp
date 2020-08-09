@@ -47,7 +47,7 @@ class GalleryViewController: UIViewController,UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.indentifier, for: indexPath) as! GalleryCollectionViewCell
         
-        cell.configure(with: UIImage(data: gallery[indexPath.row].currentImage)!)
+        cell.configure(with: UIImage(data: gallery[indexPath.row].currentImage)!, photoLabel: gallery[indexPath.row].category )
         
         return cell
     }

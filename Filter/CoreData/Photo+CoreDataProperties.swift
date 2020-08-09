@@ -22,5 +22,6 @@ extension Photo {
     @NSManaged public var originalImage: Data
     @NSManaged public var date: Date
     @NSManaged public var volume: Double
+    @NSManaged public var category: String
 
 }
