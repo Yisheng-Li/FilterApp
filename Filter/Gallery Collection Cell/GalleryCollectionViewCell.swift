@@ -11,8 +11,6 @@ import UIKit
 class GalleryCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var label: UILabel!
-    
     
     static let indentifier = "GalleryCollectionViewCell"
     
@@ -21,9 +19,8 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    public func configure(with image: UIImage, photoLabel: String){
+    public func configure(with image: UIImage){
         imageView.image = image
-        label.text = photoLabel
     }
     
     static func nib() -> UINib{

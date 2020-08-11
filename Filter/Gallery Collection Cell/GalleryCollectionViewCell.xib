@@ -16,30 +16,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="166" height="265"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NTI-xG-H6t">
-                        <rect key="frame" x="0.0" y="0.0" width="166" height="244"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NTI-xG-H6t">
+                        <rect key="frame" x="0.0" y="0.0" width="166" height="265"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWJ-UU-dp1">
-                        <rect key="frame" x="62" y="244" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="NTI-xG-H6t" secondAttribute="bottom" id="AO2-k9-wRw"/>
                 <constraint firstItem="NTI-xG-H6t" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="F5H-3U-eVx"/>
-                <constraint firstItem="rWJ-UU-dp1" firstAttribute="top" secondItem="NTI-xG-H6t" secondAttribute="bottom" id="Y0r-Fe-vfx"/>
                 <constraint firstItem="NTI-xG-H6t" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eIn-Wk-PNY"/>
-                <constraint firstItem="rWJ-UU-dp1" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="sfV-mF-5GX"/>
                 <constraint firstAttribute="trailing" secondItem="NTI-xG-H6t" secondAttribute="trailing" id="vL1-hY-X3U"/>
-                <constraint firstAttribute="bottom" secondItem="rWJ-UU-dp1" secondAttribute="bottom" id="xrY-BN-ppm"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="166" height="265"/>
             <connections>
                 <outlet property="imageView" destination="NTI-xG-H6t" id="MMy-rX-yrD"/>
-                <outlet property="label" destination="rWJ-UU-dp1" id="lwE-Zo-VAn"/>
             </connections>
             <point key="canvasLocation" x="179.71014492753625" y="96.763392857142847"/>
         </collectionViewCell>

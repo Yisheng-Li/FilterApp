@@ -26,6 +26,9 @@
 		59A133BC24BE8BDD00FEA972 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A133BA24BE8BDD00FEA972 /* MyCollectionViewCell.swift */; };
 		59BDC44824B7EF430034F804 /* Filter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59BDC44624B7EF430034F804 /* Filter.xcdatamodeld */; };
 		59D8444F24C0F9B10042D58F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D8444E24C0F9B10042D58F /* PhotoViewController.swift */; };
+		59DAD8A124E1EA46009B049B /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DAD8A024E1EA46009B049B /* CategoryViewController.swift */; };
+		59DAD8B824E2709E009B049B /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DAD8B624E2709E009B049B /* CategoryCollectionViewCell.swift */; };
+		59DAD8B924E2709E009B049B /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59DAD8B724E2709E009B049B /* CategoryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		59A133BA24BE8BDD00FEA972 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		59BDC44724B7EF430034F804 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		59D8444E24C0F9B10042D58F /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		59DAD8A024E1EA46009B049B /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		59DAD8B624E2709E009B049B /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		59DAD8B724E2709E009B049B /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +98,13 @@
 			isa = PBXGroup;
 			children = (
 				59A133B824BE8BDD00FEA972 /* Filter Menu Collection Cell */,
+				59DAD8B524E2706F009B049B /* Category Collection Cell */,
 				592364E324BFAF2E00B1871F /* Gallery Collection Cell */,
 				59BDC44524B7EF110034F804 /* CoreData */,
 				593D5EE72486F82000D563B1 /* AppDelegate.swift */,
 				59D8444E24C0F9B10042D58F /* PhotoViewController.swift */,
 				5956100D24BB922D00822729 /* GalleryViewController.swift */,
+				59DAD8A024E1EA46009B049B /* CategoryViewController.swift */,
 				593D5EE92486F82000D563B1 /* SceneDelegate.swift */,
 				593D5EEB2486F82000D563B1 /* ViewController.swift */,
 				59831D3F24980AD6002CBD0D /* ImageProcessor.swift */,
@@ -128,6 +136,15 @@
 				5979CAFC24BAE0EC00FF4852 /* DataController.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		59DAD8B524E2706F009B049B /* Category Collection Cell */ = {
+			isa = PBXGroup;
+			children = (
+				59DAD8B624E2709E009B049B /* CategoryCollectionViewCell.swift */,
+				59DAD8B724E2709E009B049B /* CategoryCollectionViewCell.xib */,
+			);
+			path = "Category Collection Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59DAD8B924E2709E009B049B /* CategoryCollectionViewCell.xib in Resources */,
 				593D5EF42486F82400D563B1 /* LaunchScreen.storyboard in Resources */,
 				593D5EF12486F82400D563B1 /* Assets.xcassets in Resources */,
 				59A133BB24BE8BDD00FEA972 /* MyCollectionViewCell.xib in Resources */,
@@ -203,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59DAD8B824E2709E009B049B /* CategoryCollectionViewCell.swift in Sources */,
 				5979CB0424BAF52700FF4852 /* Photo+CoreDataClass.swift in Sources */,
 				593D5EEC2486F82000D563B1 /* ViewController.swift in Sources */,
 				59A133BC24BE8BDD00FEA972 /* MyCollectionViewCell.swift in Sources */,
@@ -213,6 +232,7 @@
 				593D5EE82486F82000D563B1 /* AppDelegate.swift in Sources */,
 				59831D4024980AD6002CBD0D /* ImageProcessor.swift in Sources */,
 				594C70DE24E07D7700A42EC1 /* MSCSAPIClient.swift in Sources */,
+				59DAD8A124E1EA46009B049B /* CategoryViewController.swift in Sources */,
 				5979CB0524BAF52700FF4852 /* Photo+CoreDataProperties.swift in Sources */,
 				59D8444F24C0F9B10042D58F /* PhotoViewController.swift in Sources */,
 				592364E624BFAF6C00B1871F /* GalleryCollectionViewCell.swift in Sources */,

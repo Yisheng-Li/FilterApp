@@ -21,7 +21,7 @@ struct Filter {
 
 class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
-    static let apiKey = "xxxxxxxxxxxxxxxxxxxxxxxxx"
+    static let apiKey = "xxxxxxxxxxxxxxxxxxxxxxxx"
     
     let dispatchGroup = DispatchGroup()
     let filtersUpdateQueue = DispatchQueue.global(qos: .utility)
@@ -37,7 +37,6 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
             
             DispatchQueue.main.async {
                 self.changeImage(newImage: self.currentImage)            }
-            
             
         }
     }
@@ -300,7 +299,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
             originalImage = image
             currentImage = image
             updateFilters(image: image)
-            selectedFilter = ""
+            selectedFilter = "None"
             filterButton.isEnabled = false
             slider.setValue(2, animated: false)
             
@@ -452,10 +451,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
                 self.loadingView.removeFromSuperview()
             }
         }
-        
-        
     }
-    
     
     
 }

@@ -22,14 +22,6 @@ class GalleryViewController: UIViewController,UICollectionViewDelegate, UICollec
         
         super.viewDidLoad()
         
-        let fetchRequest: NSFetchRequest<Photo> = Photo.fetchRequest()
-        do{
-            let gallery = try  DataController.context.fetch(fetchRequest)
-            self.gallery = gallery
-        } catch {
-            fatalError("Photos fetch failed")
-        }
-        
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 180, height: 200)
         collectionView.collectionViewLayout = layout
@@ -47,7 +39,7 @@ class GalleryViewController: UIViewController,UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GalleryCollectionViewCell.indentifier, for: indexPath) as! GalleryCollectionViewCell
         
-        cell.configure(with: UIImage(data: gallery[indexPath.row].currentImage)!, photoLabel: gallery[indexPath.row].category )
+        cell.configure(with: UIImage(data: gallery[indexPath.row].currentImage)!)
         
         return cell
     }

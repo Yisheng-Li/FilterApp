@@ -39,7 +39,7 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title=" Gallery" image="doc.richtext" catalog="system"/>
                                                 <connections>
-                                                    <segue destination="Rgp-j0-koa" kind="presentation" id="JCF-Yw-S22"/>
+                                                    <segue destination="EyW-Rl-u8z" kind="presentation" id="iyW-Vz-KDT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcw-50-6MW">
@@ -315,10 +315,10 @@
             </objects>
             <point key="canvasLocation" x="-327.536231884058" y="64.955357142857139"/>
         </scene>
-        <!--Gallery-->
+        <!--Gallery View Controller-->
         <scene sceneID="2GV-eE-NH1">
             <objects>
-                <viewController id="vef-S6-moh" customClass="GalleryViewController" customModule="Filter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vef-S6-moh" userLabel="Gallery View Controller" customClass="GalleryViewController" customModule="Filter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iPF-ie-gd4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,7 +341,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <segue destination="vlq-Ez-f1f" kind="show" identifier="PresentPhotoDetails" id="egm-Tv-bNf"/>
+                                            <segue destination="vlq-Ez-f1f" kind="show" identifier="PresentPhotoDetails" id="3jl-zi-dzO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -367,7 +367,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPT-yx-jGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1515.9420289855075" y="64.955357142857139"/>
+            <point key="canvasLocation" x="2860.8695652173915" y="64.955357142857139"/>
+        </scene>
+        <!--Gallery-->
+        <scene sceneID="BNn-mh-wun">
+            <objects>
+                <viewController id="D9Q-r3-Uax" customClass="CategoryViewController" customModule="Filter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ufL-h4-Q6w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="H47-Pq-rc0">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PUZ-eB-hMP">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="K5E-77-tdg">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ejg-Rd-Crd">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <segue destination="vef-S6-moh" kind="show" identifier="PresentCategorizedGallery" id="lqT-9L-h37"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="D9Q-r3-Uax" id="ZIt-38-kvQ"/>
+                                    <outlet property="delegate" destination="D9Q-r3-Uax" id="7n1-72-dhg"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="H47-Pq-rc0" firstAttribute="leading" secondItem="htz-fQ-dkg" secondAttribute="leading" id="HgH-Nm-tfe"/>
+                            <constraint firstItem="htz-fQ-dkg" firstAttribute="bottom" secondItem="H47-Pq-rc0" secondAttribute="bottom" id="J9E-HM-jW6"/>
+                            <constraint firstItem="htz-fQ-dkg" firstAttribute="trailing" secondItem="H47-Pq-rc0" secondAttribute="trailing" id="e5z-Dw-c41"/>
+                            <constraint firstItem="H47-Pq-rc0" firstAttribute="top" secondItem="htz-fQ-dkg" secondAttribute="top" id="wwf-gH-u1o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="htz-fQ-dkg"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gallery" id="4dq-GB-cOg">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="LcK-Wt-l9y"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="H47-Pq-rc0" id="ZEC-DG-FkE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6H-Sg-veq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1979.7101449275365" y="64.955357142857139"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="HDI-lc-KOQ">
@@ -466,25 +522,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paC-HI-tdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2385.507246376812" y="64.955357142857139"/>
+            <point key="canvasLocation" x="3708.6956521739135" y="64.955357142857139"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="3Tm-8w-ULI">
+        <scene sceneID="Gbd-Ej-uxh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rgp-j0-koa" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EyW-Rl-u8z" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wd0-H4-ozG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HdV-qr-t3g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vef-S6-moh" kind="relationship" relationship="rootViewController" id="Hw0-zV-zxM"/>
+                        <segue destination="D9Q-r3-Uax" kind="relationship" relationship="rootViewController" id="7nq-KH-JXU"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ch-XL-lRS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfi-tZ-wgp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605.79710144927537" y="64.955357142857139"/>
+            <point key="canvasLocation" x="1069.5652173913045" y="64.955357142857139"/>
         </scene>
     </scenes>
     <resources>
