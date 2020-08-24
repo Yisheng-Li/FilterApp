@@ -330,7 +330,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
                 }
                 return String(category.split(separator: "_")[0])
             } else {
-                return "others"
+                return "Others"
             }
         }
     }
