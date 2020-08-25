@@ -314,21 +314,27 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
                     return
                 }
                 self.category = getCategory(data:data)
-           }
+            }
         }
         
         func getCategory(data: AnyObject) -> String {
             if let categories = data["categories"] as? [Dictionary<String, AnyObject>] {
-                var score = categories[0]["score"] as! Double
-                var category = categories[0]["name"] as! String
-                for cate in categories {
-                    let currentScore = cate["score"] as! Double
-                    if  currentScore > score {
-                        score = currentScore
-                        category = cate["name"] as! String
+                if  categories.count != 0  {
+                    var score = categories[0]["score"] as! Double
+                    var category = categories[0]["name"] as! String
+                    for cate in categories {
+                        let currentScore = cate["score"] as! Double
+                        if  currentScore > score {
+                            score = currentScore
+                            category = cate["name"] as! String
+                        }
                     }
+                    return String(category.split(separator: "_")[0])
+                } else {
+                    return "Others"
                 }
-                return String(category.split(separator: "_")[0])
+                
+                
             } else {
                 return "Others"
             }
